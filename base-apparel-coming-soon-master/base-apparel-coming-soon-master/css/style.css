@@ -80,6 +80,19 @@ button {
   max-width: 80rem;
 }
 
+/* visually hide content for sighted readers but still in the DOM for screen readers*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* colors */
 .text-grayRed {
   color: hsl(var(--clr-darkGrayishRed));
@@ -122,7 +135,7 @@ button {
 .content-container {
   flex-direction: column;
   --gap: 2rem;
-  padding-top: 2em;
+  padding-top: 3em;
   min-height: 100vh;
 }
 
@@ -169,7 +182,7 @@ form {
 
 .sign-up input {
   background-color: transparent;
-  border: 1px solid hsl(var(--clr-desaturatedRed));
+  border: 0.5px solid hsl(var(--clr-desaturatedRed));
   border-radius: 50px;
   width: 100%;
   padding: 0.9em 6em 0.8em 1em;
@@ -180,21 +193,15 @@ input::placeholder {
   color: hsl(var(--clr-desaturatedRed));
 }
 
-.error-message {
-  padding-left: 1em;
-}
-
-.sign-up .error-icon {
-  position: absolute;
-  top: 11px;
-  right: 70px;
+.arrow-icon {
+  margin: 0 auto;
 }
 
 .sign-up button {
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   padding-inline: 1.3em 0.9375em;
   border: none;
-  width: 3.7em;
+  width: 3.9em;
   border-radius: 3.125em;
   position: absolute;
   top: 0;
@@ -210,7 +217,7 @@ input::placeholder {
     hsl(0, 80%, 86%),
     hsla(0, 74%, 74%, 0.5)
   );
-  opacity: 0.7;
+  opacity: 0.5;
   box-shadow: 0 4px 12px -1px hsl(var(--clr-darkGrayishRed) / 0.4);
   cursor: pointer;
 }
@@ -219,6 +226,16 @@ input::placeholder {
 .error-icon,
 .error-message {
   display: none;
+}
+
+.error-message {
+  padding-left: 1em;
+}
+
+.sign-up .error-icon {
+  position: absolute;
+  top: 11px;
+  right: 70px;
 }
 
 .invalid-email .error-message,
@@ -278,6 +295,6 @@ input::placeholder {
 
   .content-container > * {
     padding: 1em 5em 0 8em;
-    --flow-space: 5rem;
+    --flow-space: 8rem;
   }
 }
