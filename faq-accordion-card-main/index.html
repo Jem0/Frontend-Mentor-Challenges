@@ -26,15 +26,30 @@
   </head>
   <body>
     <main class="container flex">
-      <div class="illustration-container">
-        <div class="desktop-wrapper flex">
-          <img
-            class="desktop"
-            src="images/illustration-woman-online-desktop.svg"
-            alt=""
-          />
+      <div class="wrapper">
+        <div class="hide-overflow">
+          <picture>
+            <source
+              media="(max-width: 750px)"
+              srcset="images/illustration-woman-online-mobile.svg"
+            />
+            <img
+              class="desktop"
+              src="images/illustration-woman-online-desktop.svg"
+              alt=""
+            />
+          </picture>
+
+          <picture>
+            <source
+              media="(max-width: 750px)"
+              srcset="images/bg-pattern-mobile.svg"
+            />
+            <img class="pattern" src="images/bg-pattern-desktop.svg" alt="" />
+          </picture>
         </div>
-        <img class="box" src="images/illustration-box-desktop.svg" alt="box" />
+
+        <img class="box" src="images/illustration-box-desktop.svg" alt="" />
       </div>
 
       <section class="accordion flex">
@@ -101,12 +116,5 @@
         </div>
       </section>
     </main>
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Jiemin Huang</a>.
-    </footer>
   </body>
 </html>

@@ -8,11 +8,34 @@
   --lightGrayishBlue: hsl(240, 5%, 91%);
 }
 
-* {
+/* ------------------------- */
+/* Reset                     */
+/* ------------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html,
+/* Reset Margin */
+body,
+h1,
+h2,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
 body {
   margin: 0;
   padding: 0;
@@ -20,12 +43,34 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   font-family: "Kumbh Sans", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
 }
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------- */
+/* Utility classes           */
+/* ------------------------- */
 
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -39,31 +84,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/*  */
-.illustration-container {
-  width: 50%;
-  min-height: 50%;
-  background: url("../images/bg-pattern-desktop.svg") no-repeat 0 0;
-  background-position: center right;
+/* additional styles */
+.wrapper {
+  width: 45%;
   position: relative;
-}
-
-img {
-  width: 100%;
-}
-
-.desktop-wrapper {
-  width: 90%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  align-items: center;
-}
-
-.desktop {
-  width: 100%;
-  position: absolute;
-  left: -7%;
 }
 
 .box {
@@ -73,38 +97,59 @@ img {
   width: 35%;
 }
 
-.question-wrapper {
-  display: flex;
-  justify-content: space-between;
+.hide-overflow {
+  position: relative;
+  min-height: 35em; /* need to set height since div contains positioned elements*/
+  overflow: hidden;
 }
 
-.question {
-  width: 80%;
+.desktop,
+.pattern {
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
 
-.arrow {
-  width: 5%;
-  align-self: center;
+.desktop {
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
 }
+
+.pattern {
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+/* FAQ */
 
 .accordion {
   flex-direction: column;
   align-self: center;
-  width: 40%;
-  margin: 3rem;
+  width: 55%;
+  margin: 3rem 6rem 3rem 0;
 }
 
 .title {
   font-size: 2rem;
-  margin-bottom: 0;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.question-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.arrow {
+  width: 1em;
+  align-self: center;
 }
 
 .question-answer-set {
   border-bottom: 1px solid hsl(240, 5%, 91%);
-}
-
-.question-answer-set:last-child {
-  border: none;
 }
 
 .question:hover {
@@ -121,6 +166,7 @@ img {
 .active .answer {
   display: block;
   margin: 0;
+  padding-bottom: 1em;
   transition: all 0.4s ease-in;
 }
 
@@ -129,6 +175,7 @@ img {
 }
 
 .active .question {
+  color: black;
   font-weight: bold;
 }
 
@@ -138,48 +185,40 @@ img {
 
 /* media query */
 @media screen and (max-width: 750px) {
+  body {
+    min-height: 115vh;
+  }
   .container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10rem 26rem;
-    height: 45rem;
+    min-height: 45rem;
+    top: 60%;
   }
 
-  .illustration-container {
-    width: 100%;
-    background: url(../images/bg-pattern-mobile.svg) no-repeat;
-    background-position: center bottom;
-    margin: 0 auto;
-    grid-column: 1;
-  }
-
-  .desktop-wrapper,
+  .wrapper,
   .accordion {
     width: 100%;
+    margin: 0;
   }
 
-  .desktop-wrapper {
-    height: 100px;
+  .hide-overflow {
+    width: 80%;
+    left: 12%;
+    bottom: 55%;
+    min-height: 15em;
+    margin: 0 auto;
     overflow: visible;
-    justify-content: center;
   }
 
-  .desktop-wrapper .desktop {
-    background: url(../images/illustration-woman-online-mobile.svg) no repeat;
-    top: -6rem;
-    right: 3rem;
-    width: 68%;
-    margin: 0 5rem;
+  .pattern {
+    top: 60%;
+    left: -15%;
+    transform: none;
   }
 
   .box {
-    top: -5%;
-    left: 11%;
-    width: 25%;
-  }
-
-  .accordion {
-    margin: 0;
+    display: none;
   }
 
   .title {
@@ -191,16 +230,4 @@ img {
     margin-left: 3em;
     margin-right: 3em;
   }
-}
-
-/* attribution */
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  position: absolute;
-  top: 98%;
-}
-.attribution a {
-  color: hsl(228, 74%, 92%);
 }
