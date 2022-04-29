@@ -1,0 +1,55 @@
+.main-content-wrapper.light-theme {
+  background-color: $veryLightGray;
+
+  .tabs-container {
+    background-color: $white;
+    box-shadow: 1px 10px 20px $veryLightGrayishBlue;
+    button {
+      &:hover {
+        color: $veryDarkGrayishBlue;
+      }
+    }
+  }
+}
+
+.light-theme {
+  .background-container {
+    background-image: url("../images/bg-desktop-light.jpg");
+
+    .input-container {
+      input {
+        background: $white;
+        &::placeholder {
+          color: $darkGrayishBlue;
+        }
+      }
+
+      form {
+        .submit-container {
+          background: $white;
+
+          .btn-submit {
+            border: 1px solid $lightGrayishBlue;
+          }
+        }
+      }
+    }
+  }
+
+  .list-container {
+    background-color: $white;
+    box-shadow: 1px 10px 20px $veryLightGrayishBlue;
+
+    li {
+      color: $veryDarkGrayishBlue;
+      border-bottom: 1px solid $lightGrayishBlue;
+      .btn-check {
+        border: 1px solid $veryLightGrayishBlue;
+      }
+    }
+  }
+
+  .container {
+    color: $darkGrayishBlue;
+  }
+}

@@ -1,0 +1,386 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+h1,
+h2,
+h3,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #161722;
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.main-content-wrapper.light-theme {
+  background-color: #fafafa;
+}
+
+.main-content-wrapper.light-theme .tabs-container {
+  background-color: white;
+  -webkit-box-shadow: 1px 10px 20px #e4e5f1;
+          box-shadow: 1px 10px 20px #e4e5f1;
+}
+
+.main-content-wrapper.light-theme .tabs-container button:hover {
+  color: #4d5066;
+}
+
+.light-theme .background-container {
+  background-image: url("../images/bg-desktop-light.jpg");
+}
+
+.light-theme .background-container .input-container input {
+  background: white;
+}
+
+.light-theme .background-container .input-container input::-webkit-input-placeholder {
+  color: #777a92;
+}
+
+.light-theme .background-container .input-container input:-ms-input-placeholder {
+  color: #777a92;
+}
+
+.light-theme .background-container .input-container input::-ms-input-placeholder {
+  color: #777a92;
+}
+
+.light-theme .background-container .input-container input::placeholder {
+  color: #777a92;
+}
+
+.light-theme .background-container .input-container form .submit-container {
+  background: white;
+}
+
+.light-theme .background-container .input-container form .submit-container .btn-submit {
+  border: 1px solid #cacde8;
+}
+
+.light-theme .list-container {
+  background-color: white;
+  -webkit-box-shadow: 1px 10px 20px #e4e5f1;
+          box-shadow: 1px 10px 20px #e4e5f1;
+}
+
+.light-theme .list-container li {
+  color: #4d5066;
+  border-bottom: 1px solid #cacde8;
+}
+
+.light-theme .list-container li .btn-check {
+  border: 1px solid #e4e5f1;
+}
+
+.light-theme .container {
+  color: #777a92;
+}
+
+.background-container {
+  background-image: url("../images/bg-desktop-dark.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background-container .input-container {
+  width: 40%;
+}
+
+.background-container .input-container .heading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.background-container .input-container .heading-container h1 {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 0.5em;
+}
+
+.background-container .input-container .heading-container .theme-icon {
+  cursor: pointer;
+}
+
+.background-container .input-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.background-container .input-container form .submit-container {
+  width: 10%;
+  border-radius: 6px 0 0 6px;
+  background: #25273c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background-container .input-container form .submit-container .btn-submit {
+  border: 1px solid #cacde8;
+  border-radius: 50%;
+  color: #cacde8;
+  aspect-ratio: 1;
+  width: 35%;
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.background-container .input-container form input {
+  width: 100%;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  min-height: 3.5em;
+  font-family: inherit;
+  font-size: 1em;
+  background: #25273c;
+}
+
+.background-container .input-container form input::-webkit-input-placeholder {
+  color: #4d5066;
+}
+
+.background-container .input-container form input:-ms-input-placeholder {
+  color: #4d5066;
+}
+
+.background-container .input-container form input::-ms-input-placeholder {
+  color: #4d5066;
+}
+
+.background-container .input-container form input::placeholder {
+  color: #4d5066;
+}
+
+.background-container .input-container form input:focus {
+  outline: none;
+}
+
+.main-content-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content-wrapper .tabs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  padding: 1em;
+  background: #25273c;
+  border-radius: 6px;
+  -webkit-box-shadow: 1px 10px 20px black;
+          box-shadow: 1px 10px 20px black;
+  position: absolute;
+  top: 70%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.main-content-wrapper .tabs-container button {
+  color: #777a92;
+}
+
+.main-content-wrapper .tabs-container button:hover {
+  color: #e4e5f1;
+}
+
+.main-content-wrapper .tabs-container button:focus {
+  color: #3a7bfd;
+}
+
+.main-content-wrapper .tabs-container .btn-all {
+  color: #3a7bfd;
+}
+
+.main-content-wrapper .container {
+  width: 100%;
+  position: absolute;
+  bottom: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4d5066;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 25%;
+}
+
+main .list-container {
+  width: 40%;
+  background: #25273c;
+  border-radius: 6px;
+  -webkit-box-shadow: 1px 10px 20px black;
+          box-shadow: 1px 10px 20px black;
+  color: #cacde8;
+}
+
+main .list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main .list-container ul li {
+  padding: 1em;
+  border-bottom: 1px solid #4d5066;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto 1fr;
+      grid-template-columns: auto auto 1fr;
+  justify-items: end;
+  cursor: pointer;
+}
+
+main .list-container ul li .btn-check {
+  border: 1px solid #777a92;
+  border-radius: 50%;
+  margin: 0 1.2em 0 1em;
+  aspect-ratio: 1;
+}
+
+main .list-container ul li .btn-check:hover {
+  border: 1px solid #57ddff;
+}
+
+main .list-container .completed {
+  text-decoration: line-through;
+  color: #777a92;
+}
+
+main .list-container .completed .btn-check {
+  background: linear-gradient(45deg, #57ddff, #c058f3);
+}
+
+main .list-container .completed .btn-check img {
+  display: block;
+}
+
+main .list-container .todo-footer-container {
+  padding: 1em;
+  color: #777a92;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .list-container .todo-footer-container button {
+  color: #777a92;
+}
+
+main .list-container .todo-footer-container button:hover {
+  color: #e4e5f1;
+}
+
+.hidden {
+  display: none;
+}
+
+.draggable.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+  .background-container .input-container {
+    width: 90%;
+  }
+  main .list-container {
+    width: 90%;
+  }
+  .main-content-wrapper .tabs-container {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

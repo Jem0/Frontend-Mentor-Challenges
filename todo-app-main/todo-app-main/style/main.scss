@@ -1,0 +1,153 @@
+@import "_colors";
+@import "_reset";
+@import "_light-theme";
+@import "_header";
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($direction, $spacing) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $spacing;
+}
+
+.main-content-wrapper {
+  position: relative;
+  min-height: 100vh;
+
+  .tabs-container {
+    @include center;
+    width: 40%;
+    padding: 1em;
+    background: $veryDarkDesaturatedBlue;
+    border-radius: 6px;
+    box-shadow: 1px 10px 20px black;
+    position: absolute;
+    top: 70%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    button {
+      color: $darkGrayishBlue;
+      &:hover {
+        color: $lightGrayishBlueHover;
+      }
+      &:focus {
+        color: $brightBlue;
+      }
+    }
+    .btn-all {
+      color: $brightBlue;
+    }
+  }
+  .container {
+    width: 100%;
+    position: absolute;
+    bottom: 3em;
+    @include center;
+    color: $veryDarkGrayishBlue;
+  }
+}
+
+main {
+  @include center;
+  position: absolute;
+  width: 100%;
+  top: 25%;
+
+  .list-container {
+    width: 40%;
+    background: $veryDarkDesaturatedBlue;
+    border-radius: 6px;
+    box-shadow: 1px 10px 20px black;
+    color: $lightGrayishBlue;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 1em;
+        border-bottom: 1px solid $veryDarkGrayishBlue;
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        justify-items: end;
+        cursor: pointer;
+
+        .btn-check {
+          border: 1px solid $darkGrayishBlue;
+          border-radius: 50%;
+          margin: 0 1.2em 0 1em;
+          aspect-ratio: 1;
+
+          &:hover {
+            border: 1px solid $checkBackgroundClr1;
+          }
+        }
+      }
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: $darkGrayishBlue;
+
+      .btn-check {
+        background: linear-gradient(
+          45deg,
+          $checkBackgroundClr1,
+          $checkBackgroundClr2
+        );
+        img {
+          display: block;
+        }
+      }
+    }
+
+    .todo-footer-container {
+      padding: 1em;
+      color: $darkGrayishBlue;
+      @include flex(row, space-between);
+
+      button {
+        color: $darkGrayishBlue;
+
+        &:hover {
+          color: $lightGrayishBlueHover;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.draggable.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+  .background-container {
+    .input-container {
+      width: 90%;
+    }
+  }
+  main {
+    .list-container {
+      width: 90%;
+    }
+  }
+  .main-content-wrapper {
+    .tabs-container {
+      width: 90%;
+    }
+  }
+}

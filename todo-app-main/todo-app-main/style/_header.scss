@@ -1,0 +1,75 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($direction, $spacing) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $spacing;
+}
+
+.background-container {
+  background-image: url("../images/bg-desktop-dark.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 30vh;
+  @include center;
+
+  .input-container {
+    width: 40%;
+
+    .heading-container {
+      @include flex(row, space-between);
+      margin-bottom: 5%;
+      h1 {
+        color: white;
+        font-size: 3rem;
+        letter-spacing: 0.5em;
+      }
+
+      .theme-icon {
+        cursor: pointer;
+      }
+    }
+
+    form {
+      @include flex(row, start);
+
+      .submit-container {
+        width: 10%;
+        border-radius: 6px 0 0 6px;
+        background: $veryDarkDesaturatedBlue;
+        @include center;
+
+        .btn-submit {
+          border: 1px solid $lightGrayishBlue;
+          border-radius: 50%;
+          color: $lightGrayishBlue;
+          aspect-ratio: 1;
+          width: 35%;
+          margin-left: 0.5em;
+          cursor: pointer;
+        }
+      }
+
+      input {
+        width: 100%;
+        border: none;
+        border-radius: 0 6px 6px 0;
+        min-height: 3.5em;
+        font-family: inherit;
+        font-size: 1em;
+        background: $veryDarkDesaturatedBlue;
+        &::placeholder {
+          color: $veryDarkGrayishBlue;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

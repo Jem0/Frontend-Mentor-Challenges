@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <div class="main-content-wrapper">
+      <section class="background-container">
+        <div class="input-container">
+          <header class="heading-container">
+            <h1>TODO</h1>
+            <div class="theme-icon">
+              <img src="images/icon-sun.svg" alt="" />
+            </div>
+          </header>
+
+          <form id="add-item">
+            <div class="submit-container">
+              <button type="submit" class="btn-submit" value="+" />
+            </div>
+
+            <input type="text" placeholder="Create a new todo..." name="item" />
+          </form>
+        </div>
+      </section>
+
+      <main>
+        <div class="list-container">
+          <section class="todo-container">
+            <ul id="todo-list"></ul>
+          </section>
+
+          <section class="hidden">
+            <ul id="active-list"></ul>
+          </section>
+
+          <section class="hidden">
+            <ul id="completed-list"></ul>
+          </section>
+
+          <div class="todo-footer-container">
+            <p class="items-left">0 items left</p>
+            <button class="btn-clear">Clear Completed</button>
+          </div>
+        </div>
+      </main>
+
+      <div class="tabs-container">
+        <button class="btn-all">All</button>
+        <button class="btn-active">Active</button>
+        <button class="btn-completed">Completed</button>
+      </div>
+
+      <div class="container">
+        <p>Drag and drop to reorder list</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

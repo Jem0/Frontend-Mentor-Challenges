@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+h1,
+h2,
+h3,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $veryDarkBlue;
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
