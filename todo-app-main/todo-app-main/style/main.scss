@@ -3,6 +3,19 @@
 @import "_light-theme";
 @import "_header";
 
+/* visually hide content for sighted readers but still in the DOM for screen readers*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @mixin center {
   display: flex;
   justify-content: center;
@@ -23,13 +36,12 @@
     @include center;
     width: 40%;
     padding: 1em;
+    margin-top: 1%;
     background: $veryDarkDesaturatedBlue;
     border-radius: 6px;
     box-shadow: 1px 10px 20px black;
     position: absolute;
-    top: 70%;
-    right: 50%;
-    transform: translate(50%, -50%);
+
     button {
       color: $darkGrayishBlue;
       &:hover {
@@ -58,65 +70,68 @@ main {
   width: 100%;
   top: 25%;
 
-  .list-container {
+  .list-footer-wrapper {
     width: 40%;
-    background: $veryDarkDesaturatedBlue;
-    border-radius: 6px;
-    box-shadow: 1px 10px 20px black;
-    color: $lightGrayishBlue;
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .list-container {
+      background: $veryDarkDesaturatedBlue;
+      border-radius: 6px;
+      box-shadow: 1px 10px 20px black;
+      color: $lightGrayishBlue;
 
-      li {
-        padding: 1em;
-        border-bottom: 1px solid $veryDarkGrayishBlue;
-        display: grid;
-        grid-template-columns: auto auto 1fr;
-        justify-items: end;
-        cursor: pointer;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-        .btn-check {
-          border: 1px solid $darkGrayishBlue;
-          border-radius: 50%;
-          margin: 0 1.2em 0 1em;
-          aspect-ratio: 1;
+        li {
+          padding: 1em;
+          border-bottom: 1px solid $veryDarkGrayishBlue;
+          display: grid;
+          grid-template-columns: auto auto 1fr;
+          justify-items: end;
+          cursor: pointer;
 
-          &:hover {
-            border: 1px solid $checkBackgroundClr1;
+          .btn-check {
+            border: 1px solid $darkGrayishBlue;
+            border-radius: 50%;
+            margin: 0 1.2em 0 1em;
+            aspect-ratio: 1;
+
+            &:hover {
+              border: 1px solid $checkBackgroundClr1;
+            }
           }
         }
       }
-    }
 
-    .completed {
-      text-decoration: line-through;
-      color: $darkGrayishBlue;
-
-      .btn-check {
-        background: linear-gradient(
-          45deg,
-          $checkBackgroundClr1,
-          $checkBackgroundClr2
-        );
-        img {
-          display: block;
-        }
-      }
-    }
-
-    .todo-footer-container {
-      padding: 1em;
-      color: $darkGrayishBlue;
-      @include flex(row, space-between);
-
-      button {
+      .completed {
+        text-decoration: line-through;
         color: $darkGrayishBlue;
 
-        &:hover {
-          color: $lightGrayishBlueHover;
+        .btn-check {
+          background: linear-gradient(
+            45deg,
+            $checkBackgroundClr1,
+            $checkBackgroundClr2
+          );
+          img {
+            display: block;
+          }
+        }
+      }
+
+      .todo-footer-container {
+        padding: 1em;
+        color: $darkGrayishBlue;
+        @include flex(row, space-between);
+
+        button {
+          color: $darkGrayishBlue;
+
+          &:hover {
+            color: $lightGrayishBlueHover;
+          }
         }
       }
     }
@@ -140,12 +155,9 @@ main {
       width: 90%;
     }
   }
-  main {
-    .list-container {
-      width: 90%;
-    }
-  }
-  .main-content-wrapper {
+  main .list-footer-wrapper {
+    width: 90%;
+
     .tabs-container {
       width: 90%;
     }

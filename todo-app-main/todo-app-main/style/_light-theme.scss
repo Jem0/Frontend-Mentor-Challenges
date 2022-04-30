@@ -36,15 +36,17 @@
     }
   }
 
-  .list-container {
-    background-color: $white;
-    box-shadow: 1px 10px 20px $veryLightGrayishBlue;
+  .list-footer-wrapper {
+    .list-container {
+      background-color: $white;
+      box-shadow: 1px 10px 20px $veryLightGrayishBlue;
 
-    li {
-      color: $veryDarkGrayishBlue;
-      border-bottom: 1px solid $lightGrayishBlue;
-      .btn-check {
-        border: 1px solid $veryLightGrayishBlue;
+      li {
+        color: $veryDarkGrayishBlue;
+        border-bottom: 1px solid $lightGrayishBlue;
+        .btn-check {
+          border: 1px solid $veryLightGrayishBlue;
+        }
       }
     }
   }

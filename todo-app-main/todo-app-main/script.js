@@ -63,20 +63,36 @@ function display(inputs, list) {
   inputs.forEach((item) => {
     const buttonCheck = document.createElement("button");
     const imageCheck = document.createElement("img");
+    const spanCheck = document.createElement("span");
+
     imageCheck.src = "images/icon-check.svg";
+    imageCheck.alt = "check icon";
     imageCheck.classList.add("hidden");
     buttonCheck.setAttribute("data-id", item.id);
     buttonCheck.classList.add("btn-check");
     buttonCheck.appendChild(imageCheck);
 
+    // for screenreaders only
+    spanCheck.classList.add("sr-only");
+    spanCheck.innerText = "Check Button";
+    buttonCheck.appendChild(spanCheck);
+
     buttonCheck.addEventListener("click", toggleCompleted);
 
     const buttonCross = document.createElement("button");
     const imageCross = document.createElement("img");
+    const spanCross = document.createElement("span");
+
     imageCross.src = "images/icon-cross.svg";
+    imageCross.alt = "cross icon";
     buttonCross.setAttribute("data-id", item.id);
     buttonCross.classList.add("btn-cross");
     buttonCross.appendChild(imageCross);
+
+    // for screenreaders only
+    spanCross.classList.add("sr-only");
+    spanCross.innerText = "Cross Button";
+    buttonCross.appendChild(spanCross);
 
     buttonCross.addEventListener("click", deleteItem);
 
@@ -92,10 +108,6 @@ function display(inputs, list) {
     li.addEventListener("dragstart", (e) => {
       const dragged = e.target;
       dragged.classList.add("active");
-    });
-
-    li.addEventListener("dragend", () => {
-      dragged.classList.remove("active");
     });
 
     if (item.completed) {
@@ -194,6 +206,7 @@ localStorage.getItem("items") === null
 function handleDrag(e) {
   const dragged = document.querySelector(".active");
   e.preventDefault();
+  console.log(dragged);
   const endY = e.pageY;
 
   const draggingIndex = items.findIndex(
@@ -212,25 +225,34 @@ function insertBeforeAfterElements(y, draggingIndex) {
 
   // get the id and top position of each li/draggable element in relation to the top of viewport
   draggables.forEach((draggable) => {
+    draggable.addEventListener("dragend", () => {
+      draggable.classList.remove("active");
+    });
+
     allOffsetTop.push({
       id: draggable.dataset.id,
       topOfElement: draggable.getBoundingClientRect().top,
     });
   });
 
+  const dragging = items[draggingIndex];
+
   let afterElements = allOffsetTop.filter((x) => {
     return x.topOfElement > y;
   });
 
-  const afterElementIndex = items.findIndex(
-    (item) => item.id === afterElements[0].id
-  );
-
-  const dragging = items[draggingIndex];
-
-  // remove dragging element from list and append it before after elements
-  items.splice(draggingIndex, 1);
-  items.splice(afterElementIndex - 1, 0, dragging);
+  // if there are no after elements, push active/dragging element to list
+  // else append before after elements
+  if (afterElements.length === 0) {
+    items.splice(draggingIndex, 1);
+    items.push(dragging);
+  } else {
+    const afterElementIndex = items.findIndex(
+      (item) => item.id === afterElements[0].id
+    );
+    items.splice(draggingIndex, 1);
+    items.splice(afterElementIndex - 1, 0, dragging);
+  }
 }
 
 // debounce binding to drag event - limit the amount of times handleDrag is called

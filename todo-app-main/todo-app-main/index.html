@@ -35,7 +35,9 @@
 
           <form id="add-item">
             <div class="submit-container">
-              <button type="submit" class="btn-submit" value="+" />
+              <button type="submit" class="btn-submit">
+                <span class="sr-only">Submit Button</span>
+              </button>
             </div>
 
             <input type="text" placeholder="Create a new todo..." name="item" />
@@ -44,31 +46,33 @@
       </section>
 
       <main>
-        <div class="list-container">
-          <section class="todo-container">
-            <ul id="todo-list"></ul>
-          </section>
+        <div class="list-footer-wrapper">
+          <div class="list-container">
+            <section class="todo-container">
+              <ul id="todo-list"></ul>
+            </section>
 
-          <section class="hidden">
-            <ul id="active-list"></ul>
-          </section>
+            <section class="hidden">
+              <ul id="active-list"></ul>
+            </section>
 
-          <section class="hidden">
-            <ul id="completed-list"></ul>
-          </section>
+            <section class="hidden">
+              <ul id="completed-list"></ul>
+            </section>
 
-          <div class="todo-footer-container">
-            <p class="items-left">0 items left</p>
-            <button class="btn-clear">Clear Completed</button>
+            <div class="todo-footer-container">
+              <p class="items-left">0 items left</p>
+              <button class="btn-clear">Clear Completed</button>
+            </div>
+          </div>
+
+          <div class="tabs-container">
+            <button class="btn-all">All</button>
+            <button class="btn-active">Active</button>
+            <button class="btn-completed">Completed</button>
           </div>
         </div>
       </main>
-
-      <div class="tabs-container">
-        <button class="btn-all">All</button>
-        <button class="btn-active">Active</button>
-        <button class="btn-completed">Completed</button>
-      </div>
 
       <div class="container">
         <p>Drag and drop to reorder list</p>
