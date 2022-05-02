@@ -8,8 +8,6 @@ Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
-
 ## The challenge
 
 Your challenge is to build out this coming soon page and get it looking as close to the design as possible.
@@ -23,3 +21,11 @@ Your users should be able to:
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
   - The email address is not formatted correctly
+
+## What I've learned
+
+- Mobile-first responsive design
+- Regular expression for email validation
+- Positioning in CSS
+- Transparent input field for autocomplete:
+  `input:-webkit-autofill { -webkit-background-clip: text; }`
