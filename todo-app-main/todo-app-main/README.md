@@ -21,3 +21,14 @@ Your users should be able to:
 - Clear all completed todos
 - Toggle light and dark mode
 - **Bonus**: Drag and drop to reorder items on the list
+
+## Project difficulties
+
+- While the code works, it is not DRY. The shift to object oriented programming might be useful in this case.
+- Selecting the right target to drag and dropping the item in the correct position
+
+## What I've learned
+
+- Storing and retrieving objects with local storage
+- Debouncing vs. Throttling. How to implement debounce to limit the number of times a function can execute.
+- Use `getBoundingClientRect()` to get an element's position relative to the browser's viewport
