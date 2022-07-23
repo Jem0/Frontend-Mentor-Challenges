@@ -1,0 +1,37 @@
+footer {
+  height: 35vh;
+  background-color: #90d4c5;
+  @include flexCenter(column);
+  gap: 2.5rem;
+  padding: 4rem 1.2rem;
+
+  .footer-logo {
+    filter: invert(39%) sepia(12%) saturate(1897%) hue-rotate(118deg)
+      brightness(93%) contrast(85%);
+  }
+
+  ul {
+    li a {
+      color: $moderateCyan;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.3rem;
+
+    img {
+      margin-inline: 0.5em;
+      cursor: pointer;
+      &:hover {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(357deg)
+          brightness(100%) contrast(104%);
+      }
+    }
+  }
+}

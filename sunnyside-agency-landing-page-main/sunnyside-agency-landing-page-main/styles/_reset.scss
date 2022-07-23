@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+body {
+  background-color: hsl(26, 100%, 99%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+// additional styles
+
+.ff-Fraunces {
+  font-family: "Fraunces";
+  font-weight: 900;
+}
+
+.flow > *:where(:not(:last-child)) {
+  margin-bottom: var(--flow-space, 1rem);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: inherit;
+  align-items: center;
+  gap: 2.6rem;
+
+  li {
+    padding-inline: 0.5em;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
