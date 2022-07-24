@@ -1,4 +1,20 @@
-# Frontend Mentor - Advice generator app
+<h1 align="center">Advice generator app</h1>
+
+<div align="center">
+  <h3>
+    <a href="https://fmchallenge-advice-generator-app.netlify.app/" color="white">
+      Live
+    </a>
+    <span> | </span>
+    <a href="https://www.frontendmentor.io/solutions/advice-generator-app-rJevaCkE9">
+      Solution
+    </a>
+   <span> | </span>
+    <a href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db">
+      Challenge
+    </a>
+  </h3>
+</div>
 
 ![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)
 
