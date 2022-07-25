@@ -1,4 +1,20 @@
-# Frontend Mentor - Interactive rating component
+<h1 align="center">Interactive rating component</h1>
+
+<div align="center">
+  <h3>
+    <a href="https://fmc-interactive-rating-component.netlify.app/" color="white">
+      Live
+    </a>
+    <span> | </span>
+    <a href="https://www.frontendmentor.io/solutions/interactive-rating-component-ry8M3q9Q9">
+      Solution
+    </a>
+   <span> | </span>
+    <a href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI">
+      Challenge
+    </a>
+  </h3>
+</div>
 
 ![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
 

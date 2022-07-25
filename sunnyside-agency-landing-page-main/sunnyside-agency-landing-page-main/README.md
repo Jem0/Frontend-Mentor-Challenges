@@ -2,11 +2,11 @@
 
 <div align="center">
   <h3>
-    <a href="#" color="white">
+    <a href="https://fm-sunnyside-agency-landing-page.netlify.app/" color="white">
       Live
     </a>
     <span> | </span>
-    <a href="#">
+    <a href="https://www.frontendmentor.io/solutions/sunnyside-agency-html-scss-js-byWFml0_UB">
       Solution
     </a>
    <span> | </span>
@@ -38,4 +38,4 @@ Your users should be able to:
 ## What I've learned
 
 - Creating a right angled triangle with CSS
-- To change the color of an SVG element, convert the hex color code to a [CSS filter](https://codepen.io/sosuke/pen/Pjoqqp) then apply the filter to the `<img>` tag.
+- One way to change the color of an SVG element is to convert the hex color code to a [CSS filter](https://codepen.io/sosuke/pen/Pjoqqp) then apply the filter to the `<img>` tag. Alternatively, you can load the SVG image using `<svg>` and overwrite the path `fill` value in CSS: `path { fill: desiredColor; }`.

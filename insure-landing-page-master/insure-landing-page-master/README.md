@@ -1,4 +1,20 @@
-# Frontend Mentor - Insure landing page
+<h1 align="center">Insure landing page</h1>
+
+<div align="center">
+  <h3>
+    <a href="https://fm-challenge-insure-landing-page.netlify.app/" color="white">
+      Live
+    </a>
+    <span> | </span>
+    <a href="https://www.frontendmentor.io/solutions/insure-landing-page-html-css-javascript-Byf8tMANq">
+      Solution
+    </a>
+   <span> | </span>
+    <a href="https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8">
+      Challenge
+    </a>
+  </h3>
+</div>
 
 ![Design preview for the Insure landing page coding challenge](./design/desktop-preview.jpg)
 

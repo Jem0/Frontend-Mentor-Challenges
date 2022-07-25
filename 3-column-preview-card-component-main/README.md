@@ -35,6 +35,6 @@ Your users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-## Project difficulties
-
 ## What I've learned
+
+- As the browser resizes, the buttons are pushed up and down. This is to accomodate for the text since the typography responds to the viewport size. Allocating a certain amount of space or setting a height in relative units to the text keeps the buttons in place.

@@ -1,4 +1,20 @@
-# Frontend Mentor - Todo app
+<h1 align="center">Todo app</h1>
+
+<div align="center">
+  <h3>
+    <a href="https://fm-challenge-todo-app.netlify.app/" color="white">
+      Live
+    </a>
+    <span> | </span>
+    <a href="https://www.frontendmentor.io/solutions/todo-app-html-scss-vanilla-javascript-SJIzeJqrc">
+      Solution
+    </a>
+   <span> | </span>
+    <a href="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW">
+      Challenge
+    </a>
+  </h3>
+</div>
 
 ![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
 

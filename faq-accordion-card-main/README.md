@@ -1,4 +1,20 @@
-# Frontend Mentor - FAQ accordion card
+<h1 align="center">FAQ accordion card</h1>
+
+<div align="center">
+  <h3>
+    <a href="https://fmchallenge-faq-accordion-card.netlify.app/" color="white">
+      Live
+    </a>
+    <span> | </span>
+    <a href="https://www.frontendmentor.io/solutions/faq-accordion-card-S1qJHlnQ9">
+      Solution
+    </a>
+   <span> | </span>
+    <a href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam">
+      Challenge
+    </a>
+  </h3>
+</div>
 
 ![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
 
@@ -28,6 +44,6 @@ Your users should be able to:
 
 ## What I've learned
 
-- Wrapping the main illustration in a `<div>` and adding `overflow: hidden` onto that element and absolute positioning the box to the `div` gave the box the floating effect.
+- Positioning in CSS
 - Set heights to `<div>`s containing positioned elements.
 - The difference between HTML's img `srcset` vs `picture` tag. Use `srcset` for resolution switching (a more lightweight alternative) and `<picture>` for art direction.
